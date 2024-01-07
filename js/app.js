@@ -49,8 +49,7 @@ const renderCurrentWeather = (data) => {
     const weatherJSx= `
     <h1>${data.name} , ${data.sys.country}</h1>
     <div id="main">
-    <img  alt="weather icon" src="http://openweathermap.org/img/w/
-    ${data.weather[0].icon}.png" />
+    <img  alt="weather icon" src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" />
     
     <span>${data.weather[0].main}</span>
     <p>${Math.round(data.main.temp) + "°C"}</p>
@@ -75,8 +74,7 @@ const renderCurrentWeather = (data) => {
         data.forEach((i) => { 
             const forecastJsx =` 
             <div>
-            <img  alt="weather icon" src="http://openweathermap.org/img/w/
-                   ${i.weather[0].icon}.png"/>
+            <img  alt="weather icon" src="http://openweathermap.org/img/w/${i.weather[0].icon}.png"/>
                    <h3>${getWeekDay(i.dt)}</h3>
                    <p>${Math.round(i.main.temp) + "°C" }  </p>
                    <span>${i.weather[0].main}</span>
